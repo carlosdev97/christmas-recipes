@@ -10,6 +10,7 @@ body {
 
 .header {
   width: 100%;
+  padding: 10px 20px;
 }
 
 .header__navbar {
@@ -19,11 +20,44 @@ body {
 }
 
 .header__list {
-  width: 15%;
+  width: 20%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .header__item {
   list-style-type: none;
+}
+
+.header__item:nth-child(1) a {
+  color: #bc4749;
+  text-decoration: none;
+}
+
+.header__item:nth-child(1) {
+  padding: 5px 15px;
+  border: 2px solid #bc4749;
+}
+
+.header__item:nth-child(2) a {
+  color: black;
+  text-decoration: none;
+}
+
+.header__item:nth-child(2) {
+  background-color: #6a994e;
+  color: black;
+  padding: 5px 15px;
+}
+
+.home {
+  height: calc(100vh - 56px);
+  padding: 10px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
