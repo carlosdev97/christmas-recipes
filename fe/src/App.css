@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lobster", cursive;
+}
+
+.header {
+  width: 100%;
+}
+
+.header__navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__list {
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header__item {
+  list-style-type: none;
+}
