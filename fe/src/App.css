@@ -9,8 +9,8 @@ body {
 }
 
 .header {
-  width: 100%;
-  padding: 10px 20px;
+  padding: 20px 30px;
+  background-color: #6a994e;
 }
 
 .header__navbar {
@@ -20,7 +20,7 @@ body {
 }
 
 .header__list {
-  width: 20%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -30,34 +30,89 @@ body {
   list-style-type: none;
 }
 
+.header__item a {
+  text-decoration: none;
+  padding: 5px 15px;
+}
+
 .header__item:nth-child(1) a {
   color: #bc4749;
-  text-decoration: none;
+  border: 3px solid #bc4749;
+  font-weight: bold;
 }
 
-.header__item:nth-child(1) {
-  padding: 5px 15px;
-  border: 2px solid #bc4749;
-}
-
-.header__item:nth-child(2) a {
+.header__item:nth-child(1) ~ li a {
   color: black;
-  text-decoration: none;
 }
 
-.header__item:nth-child(2) {
-  background-color: #6a994e;
-  color: black;
-  padding: 5px 15px;
+.header__item:nth-child(1) ~ li a:hover {
+  text-decoration: underline;
 }
 
 .home {
-  height: calc(100vh - 56px);
-  padding: 10px 20px;
-  text-align: center;
+  height: calc(100vh - 63px);
+  padding: 20px 30px;
+  background-color: #efefef;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+/*Component Card*/
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  overflow: hidden;
+}
+.card__header {
+  background-color: #e63946;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.card__category {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #e63946;
+}
+.card__content {
+  margin-top: 15px;
+}
+.card__content h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+.card__content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+.card__content p {
+  margin-top: 15px;
+  line-height: 1.5;
+}
+.card__footer {
+  margin-top: 15px;
+  text-align: center;
+}
+.card__footer button {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.card__footer button:hover {
+  background-color: #d62839;
 }

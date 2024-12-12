@@ -1,14 +1,19 @@
 import React from "react";
+import CardRecipe from "../components/CardRecipe";
+import useFetchRecipes from "../hooks/useFetchRecipes";
 
 const Home: React.FC = () => {
+  const { recipes, loading } = useFetchRecipes();
+
+  if (loading) {
+    return <div>Loading recipes . . . ✨</div>;
+  }
+
   return (
     <div className="home">
-      <h1>Recetas Navideñas</h1>
-      <p>
-        Descubre las mejores recetas para celebrar esta Navidad con tus seres
-        queridos.
-      </p>
-      <button className="button">Ver más</button>
+      {recipes.map((recipe) => (
+        <CardRecipe key={recipe._id} recipe={recipe} />
+      ))}
     </div>
   );
 };
