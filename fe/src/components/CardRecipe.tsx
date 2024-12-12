@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface Recipe {
+  _id: string;
   title: string;
   category: string;
   ingredients: string[];
@@ -13,13 +15,19 @@ interface CardRecipeProps {
 }
 
 const CardRecipe: React.FC<CardRecipeProps> = ({ recipe }) => {
-  const { title, category, ingredients, instructions, image } = recipe;
+  const { title, image } = recipe;
+
+  const navigate = useNavigate();
+
+  const handleViewDetails = () => {
+    navigate(`/recipe/${recipe._id}`);
+  };
 
   return (
     <div className="card">
       <div className="card__header">{title}</div>
       <img className="card__image" src={image} alt={`Imagen de ${title}`}></img>
-      <div className="card__category">Categoría: {category}</div>
+      {/* <div className="card__category">Categoría: {category}</div>
       <div className="card__content">
         <h3>Ingredientes:</h3>
         <ul>
@@ -29,9 +37,11 @@ const CardRecipe: React.FC<CardRecipeProps> = ({ recipe }) => {
         </ul>
         <h3>Instrucciones:</h3>
         <p>{instructions}</p>
-      </div>
+      </div> */}
       <div className="card__footer">
-        <button>Ver más recetas</button>
+        <button className="card__button" onClick={handleViewDetails}>
+          Ver receta
+        </button>
       </div>
     </div>
   );

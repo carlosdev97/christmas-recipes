@@ -50,7 +50,7 @@ body {
 }
 
 .home {
-  height: calc(100vh - 63px);
+  height: calc(100vh - 64px);
   padding: 20px 30px;
   background-color: #efefef;
   display: flex;
@@ -76,6 +76,11 @@ body {
   border-radius: 8px 8px 0 0;
   text-align: center;
   font-size: 1.5rem;
+}
+
+.card__image {
+  max-width: 100%;
+  height: auto;
 }
 .card__category {
   margin-top: 10px;
@@ -105,6 +110,7 @@ body {
   text-align: center;
 }
 .card__footer button {
+  font-family: "Lobster", cursive;
   background-color: #e63946;
   color: #fff;
   border: none;
@@ -115,4 +121,34 @@ body {
 }
 .card__footer button:hover {
   background-color: #d62839;
+}
+
+.favorites {
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail__recipe-loader {
+  height: calc(100vh - 64px);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe__details {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.recipe__image {
+  max-width: 400px;
+  height: auto;
 }

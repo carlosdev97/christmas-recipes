@@ -5,6 +5,7 @@ export interface IRecipe extends Document {
   category: string;
   ingredients: string[];
   instructions: string;
+  image?: string;
 }
 
 const RecipeSchema: Schema = new Schema({
@@ -12,6 +13,7 @@ const RecipeSchema: Schema = new Schema({
   category: { type: String, require: true },
   ingredients: { type: [String], required: true },
   instructions: { type: String, required: true },
+  image: { type: String, required: true },
 });
 
 export default mongoose.model<IRecipe>("Recipe", RecipeSchema);
