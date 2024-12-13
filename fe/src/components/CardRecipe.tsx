@@ -26,7 +26,13 @@ const CardRecipe: React.FC<CardRecipeProps> = ({ recipe }) => {
   return (
     <div className="card">
       <div className="card__header">{title}</div>
-      <img className="card__image" src={image} alt={`Imagen de ${title}`}></img>
+      <div className="card__image-container">
+        <img
+          className="card__image"
+          src={image}
+          alt={`Imagen de ${title}`}
+        ></img>
+      </div>
       {/* <div className="card__category">Categoría: {category}</div>
       <div className="card__content">
         <h3>Ingredientes:</h3>

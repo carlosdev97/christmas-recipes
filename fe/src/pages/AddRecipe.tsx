@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import apiClient from "../utils/api";
+import { toast } from "react-hot-toast";
 
 const AddRecipe: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -23,53 +24,74 @@ const AddRecipe: React.FC = () => {
       ingredients: ingredientsArray, // Actualizar los ingredientes como array
     };
 
-    try {
-      await apiClient.post("/api/recipes", payload);
-      alert("Recipe added successfully!");
-    } catch (error) {
-      alert(`error adding recipe ${error}`);
-    }
+    await toast.promise(apiClient.post("/api/recipes", payload), {
+      loading: "Guardando receta...",
+      success: "¡Receta guardada con éxito!",
+      error: "No se pudo guardar la receta.",
+    });
+
+    setFormData({
+      title: "",
+      category: "",
+      ingredients: "",
+      instructions: "",
+      image: "",
+    });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Title"
-        onChange={(event) =>
-          setFormData({ ...formData, title: event.target.value })
-        }
-      />
-      <input
-        type="text"
-        placeholder="Category"
-        onChange={(event) =>
-          setFormData({ ...formData, category: event.target.value })
-        }
-      />
-      <input
-        type="textarea"
-        placeholder="Ingredients"
-        onChange={(event) =>
-          setFormData({ ...formData, ingredients: event.target.value })
-        }
-      />
-      <input
-        type="text"
-        placeholder="Instructions"
-        onChange={(event) =>
-          setFormData({ ...formData, instructions: event.target.value })
-        }
-      />
-      <input
-        type="text"
-        placeholder="Image"
-        onChange={(event) =>
-          setFormData({ ...formData, image: event.target.value })
-        }
-      />
-      <button type="submit">ADD</button>
-    </form>
+    <div className="form__container">
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          className="form__input"
+          type="text"
+          placeholder="Título"
+          value={formData.title}
+          onChange={(event) =>
+            setFormData({ ...formData, title: event.target.value })
+          }
+        />
+        <input
+          className="form__input"
+          type="text"
+          placeholder="Categoría"
+          value={formData.category}
+          onChange={(event) =>
+            setFormData({ ...formData, category: event.target.value })
+          }
+        />
+        <input
+          className="form__input"
+          type="textarea"
+          placeholder="Ingredientes"
+          value={formData.ingredients}
+          onChange={(event) =>
+            setFormData({ ...formData, ingredients: event.target.value })
+          }
+        />
+        <input
+          className="form__input"
+          type="text"
+          placeholder="Instrucciones"
+          value={formData.instructions}
+          onChange={(event) =>
+            setFormData({ ...formData, instructions: event.target.value })
+          }
+        />
+        <input
+          className="form__input"
+          type="text"
+          placeholder="URL imagen"
+          value={formData.image}
+          onChange={(event) =>
+            setFormData({ ...formData, image: event.target.value })
+          }
+        />
+        <button className="form__button" type="submit">
+          Agregar
+        </button>
+      </form>
+    </div>
   );
 };
 
