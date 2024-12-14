@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface Recipe {
@@ -16,11 +16,29 @@ interface CardRecipeProps {
 
 const CardRecipe: React.FC<CardRecipeProps> = ({ recipe }) => {
   const { title, image } = recipe;
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const navigate = useNavigate();
 
   const handleViewDetails = () => {
     navigate(`/recipe/${recipe._id}`);
+  };
+
+  const toggleFavorite = () => {
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+    if (favorites.includes(recipe._id)) {
+      // Si ya es favorito, eliminarlo
+      const updatedFavorites = favorites.filter(
+        (id: string) => id !== recipe._id
+      );
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+      setIsFavorite(false);
+    } else {
+      // Si no es favorito, agregarlo
+      favorites.push(recipe);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      setIsFavorite(true);
+    }
   };
 
   return (
@@ -47,6 +65,9 @@ const CardRecipe: React.FC<CardRecipeProps> = ({ recipe }) => {
       <div className="card__footer">
         <button className="card__button" onClick={handleViewDetails}>
           Ver receta
+        </button>
+        <button onClick={toggleFavorite}>
+          {isFavorite ? "❤️" : "🤍"} {/* Ícono de corazón */}
         </button>
       </div>
     </div>

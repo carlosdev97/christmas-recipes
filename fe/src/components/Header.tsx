@@ -16,10 +16,10 @@ const Header: React.FC = () => {
             <Link to="/favorites">Favorites</Link>
           </li>
           <li className="header__item">
-            <a href="">Users</a>
+            <Link to="/users">Users</Link>
           </li>
           <li className="header__item">
-            <a href="">Register User</a>
+            <Link to="/register">User Register</Link>
           </li>
         </ul>
       </nav>

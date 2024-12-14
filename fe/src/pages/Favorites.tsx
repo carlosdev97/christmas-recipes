@@ -30,7 +30,6 @@ const Favorites: React.FC = () => {
     <div className="favorites">
       {favorites.length > 0 ? (
         <div className="favorites__list">
-          <h1>My favorite recipes 🍲!</h1>
           {favorites.map((recipe) => (
             <div key={recipe._id} className="favorite__item">
               <CardRecipe recipe={recipe} />
