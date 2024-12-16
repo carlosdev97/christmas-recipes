@@ -122,14 +122,6 @@ body {
   background-color: #d62839;
 }
 
-.favorites {
-  height: calc(100vh - 64px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .detail__recipe-loader {
   height: calc(100vh - 64px);
   padding: 20px 30px;
@@ -161,13 +153,6 @@ body {
   background-color: #efefef;
 }
 
-.users {
-  padding: 20px 30px;
-  display: flex;
-  flex-wrap: wrap; /* Permite que las cards bajen a otra fila */
-  justify-content: center; /* Centra los elementos horizontalmente */
-}
-
 .user-card {
   display: flex;
   align-items: center;
@@ -176,7 +161,6 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 15px;
   width: 100%;
-  max-width: 400px;
   margin: 10px auto;
   font-family: "Lobster", cursive;
 }
@@ -200,14 +184,4 @@ body {
 .user-card__email {
   font-size: 1rem;
   color: #6a994e;
-}
-
-.favorites__list {
-  padding: 20px 30px;
-  display: flex;
-  background-color: #efefef;
-  display: flex;
-  flex-wrap: wrap; /* Permite que las cards bajen a otra fila */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  gap: 20px;
 }

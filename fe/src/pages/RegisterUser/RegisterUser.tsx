@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import apiClient from "../utils/api";
+import apiClient from "../../utils/api";
 import { toast } from "react-hot-toast";
+import "../../styles/FormStyles.css";
 
 const RegisterUser: React.FC = () => {
   const [formData, setFormData] = useState({

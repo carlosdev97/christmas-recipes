@@ -1,0 +1,21 @@
+.favorites {
+  min-height: calc(100vh - 64px);
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.favorites__list {
+  min-height: calc(100vh - 64px);
+  min-width: 100vw;
+  background-color: #efefef;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: auto;
+}

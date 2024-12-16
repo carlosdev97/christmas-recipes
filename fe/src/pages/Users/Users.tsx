@@ -1,6 +1,7 @@
 import React from "react";
-import CardUser from "../components/CardUser";
-import useFetchUsers from "../hooks/useFetchUsers";
+import CardUser from "../../components/CardUser";
+import useFetchUsers from "../../hooks/useFetchUsers";
+import "./Users.css";
 
 const Users: React.FC = () => {
   const { users, loading } = useFetchUsers();

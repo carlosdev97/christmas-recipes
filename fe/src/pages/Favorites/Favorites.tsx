@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import CardRecipe from "../components/CardRecipe";
+import CardRecipe from "../../components/CardRecipe";
+import "./Favorites.css";
 
 interface Recipe {
   _id: string;

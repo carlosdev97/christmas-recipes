@@ -1,0 +1,8 @@
+.users {
+  min-height: calc(100vh - 64px);
+  background-color: #efefef;
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
