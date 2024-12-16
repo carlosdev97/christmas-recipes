@@ -1,0 +1,16 @@
+.home {
+  padding: 20px 30px;
+  background-color: #efefef;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home__loader {
+  height: calc(100vh - 64px);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

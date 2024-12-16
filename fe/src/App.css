@@ -49,15 +49,6 @@ body {
   text-decoration: underline;
 }
 
-.home {
-  padding: 20px 30px;
-  background-color: #efefef;
-  display: flex;
-  flex-wrap: wrap; /* Permite que las cards bajen a otra fila */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  gap: 20px;
-}
-
 /*Component Card*/
 
 .card {
@@ -167,50 +158,6 @@ body {
   align-items: center;
   height: calc(100vh - 64px);
   margin: 0;
-  background-color: #efefef;
-}
-
-.form {
-  width: 40%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.form__input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-family: "Lobster", cursive;
-  font-size: 1rem;
-}
-
-.form__input:focus {
-  border-color: #6a994e;
-  outline: none;
-  box-shadow: 0 0 5px rgba(106, 153, 78, 0.5);
-}
-
-.form__button {
-  font-family: "Lobster", cursive;
-  background-color: #6a994e;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.form__button:hover {
-  background-color: #538d4e;
-  padding: 20px 30px;
   background-color: #efefef;
 }
 
