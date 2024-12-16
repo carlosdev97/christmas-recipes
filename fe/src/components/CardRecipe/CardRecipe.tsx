@@ -13,9 +13,15 @@ interface Recipe {
 
 interface CardRecipeProps {
   recipe: Recipe;
+  showFavoriteIcon?: boolean; // Optional prop para mostrar el icono de favorito
+  onDelete?: () => void; // Optional prop para mostrar el icono de borrar
 }
 
-export const CardRecipe: React.FC<CardRecipeProps> = ({ recipe }) => {
+export const CardRecipe: React.FC<CardRecipeProps> = ({
+  recipe,
+  showFavoriteIcon,
+  onDelete,
+}) => {
   const { title, image } = recipe;
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -56,7 +62,11 @@ export const CardRecipe: React.FC<CardRecipeProps> = ({ recipe }) => {
         <button className="recipe__card-button" onClick={handleViewDetails}>
           Ver receta
         </button>
-        <button onClick={toggleFavorite}>{isFavorite ? "❤️" : "🤍"}</button>
+        {showFavoriteIcon ? (
+          <button onClick={toggleFavorite}>{isFavorite ? "❤️" : "🤍"}</button>
+        ) : (
+          <button onClick={onDelete}>🗑️ {/* Botón para eliminar */}</button>
+        )}
       </div>
     </div>
   );

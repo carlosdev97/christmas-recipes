@@ -33,10 +33,11 @@ export const Favorites: React.FC = () => {
         <div className="favorites__list">
           {favorites.map((recipe) => (
             <div key={recipe._id} className="favorite__item">
-              <CardRecipe recipe={recipe} />
-              <button onClick={() => removeFromFavorites(recipe._id)}>
-                Remove
-              </button>
+              <CardRecipe
+                recipe={recipe}
+                showFavoriteIcon={false}
+                onDelete={() => removeFromFavorites(recipe._id)}
+              />
             </div>
           ))}
         </div>

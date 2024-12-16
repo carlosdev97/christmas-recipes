@@ -13,7 +13,7 @@ export const Home: FC = () => {
   return (
     <div className="home">
       {recipes.map((recipe) => (
-        <CardRecipe key={recipe._id} recipe={recipe} />
+        <CardRecipe key={recipe._id} recipe={recipe} showFavoriteIcon={true} />
       ))}
     </div>
   );
