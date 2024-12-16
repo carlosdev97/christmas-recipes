@@ -1,0 +1,51 @@
+.recipe__card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  overflow: hidden;
+  flex: 0 1 calc(33.33% - 20px);
+  max-width: 300px;
+  box-sizing: border-box;
+}
+.recipe__card-header {
+  background-color: #e63946;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.recipe__card-imagecont {
+  width: 100%;
+  height: 150px;
+}
+
+.recipe__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe__card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  text-align: center;
+}
+.recipe__card-footer button {
+  font-family: "Lobster", cursive;
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.recipe__card-footer button:hover {
+  background-color: #d62839;
+}

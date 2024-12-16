@@ -1,0 +1,40 @@
+.header {
+  padding: 20px 30px;
+  background-color: #6a994e;
+}
+
+.header__navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header__item {
+  list-style-type: none;
+}
+
+.header__item a {
+  text-decoration: none;
+  padding: 5px 15px;
+}
+
+.header__item:nth-child(1) a {
+  color: #bc4749;
+  border: 3px solid #bc4749;
+  font-weight: bold;
+}
+
+.header__item:nth-child(1) ~ li a {
+  color: black;
+}
+
+.header__item:nth-child(1) ~ li a:hover {
+  text-decoration: underline;
+}

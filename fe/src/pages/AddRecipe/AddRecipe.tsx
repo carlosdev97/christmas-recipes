@@ -3,7 +3,7 @@ import apiClient from "../../utils/api";
 import { toast } from "react-hot-toast";
 import "../../styles/FormStyles.css";
 
-const AddRecipe: React.FC = () => {
+export const AddRecipe: React.FC = () => {
   const [formData, setFormData] = useState({
     title: "",
     category: "",
@@ -95,5 +95,3 @@ const AddRecipe: React.FC = () => {
     </div>
   );
 };
-
-export default AddRecipe;

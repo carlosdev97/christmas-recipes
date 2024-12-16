@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   return (
     <header className="header">
       <nav className="header__navbar">
@@ -26,5 +27,3 @@ const Header: React.FC = () => {
     </header>
   );
 };
-
-export default Header;

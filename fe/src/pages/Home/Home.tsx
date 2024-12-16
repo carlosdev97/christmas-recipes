@@ -1,9 +1,9 @@
 import { FC } from "react";
-import CardRecipe from "../../components/CardRecipe";
+import { CardRecipe } from "../../components";
 import useFetchRecipes from "../../hooks/useFetchRecipes";
 import "./Home.css";
 
-const Home: FC = () => {
+export const Home: FC = () => {
   const { recipes, loading } = useFetchRecipes();
 
   if (loading) {
@@ -18,5 +18,3 @@ const Home: FC = () => {
     </div>
   );
 };
-
-export default Home;

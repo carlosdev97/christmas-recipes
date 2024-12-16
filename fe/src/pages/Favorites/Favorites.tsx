@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CardRecipe from "../../components/CardRecipe";
+import { CardRecipe } from "../../components";
 import "./Favorites.css";
 
 interface Recipe {
@@ -11,7 +11,7 @@ interface Recipe {
   image?: string;
 }
 
-const Favorites: React.FC = () => {
+export const Favorites: React.FC = () => {
   const [favorites, setFavorites] = useState<Recipe[]>([]);
 
   useEffect(() => {
@@ -48,5 +48,3 @@ const Favorites: React.FC = () => {
     </div>
   );
 };
-
-export default Favorites;

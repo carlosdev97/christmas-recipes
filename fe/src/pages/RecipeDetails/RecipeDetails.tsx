@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import apiClient from "../utils/api";
+import apiClient from "../../utils/api";
+import "./RecipeDeatails.css";
 
 interface Recipe {
   _id: string;
@@ -11,7 +12,7 @@ interface Recipe {
   image?: string;
 }
 
-const RecipeDetails: React.FC = () => {
+export const RecipeDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const [loading, setLoading] = useState(true);
@@ -35,9 +36,7 @@ const RecipeDetails: React.FC = () => {
   }, [id]);
 
   if (loading) {
-    return (
-      <p className="detail__recipe-loader">Loading recipe details . . .🍝</p>
-    );
+    return <p className="recipes__loader">Loading recipe details . . .🍝</p>;
   }
 
   if (error) {
@@ -71,5 +70,3 @@ const RecipeDetails: React.FC = () => {
     </div>
   );
 };
-
-export default RecipeDetails;

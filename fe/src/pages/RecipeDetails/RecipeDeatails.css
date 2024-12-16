@@ -1,0 +1,23 @@
+.recipes__loader {
+  height: calc(100vh - 64px);
+  background-color: #efefef;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe__details {
+  padding: 20px 30px;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.recipe__image {
+  max-width: 400px;
+  height: auto;
+}
