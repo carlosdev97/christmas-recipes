@@ -9,6 +9,14 @@
   justify-content: flex-end;
 }
 
+.header__button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 .header__list {
   width: 100%;
   display: flex;
@@ -37,4 +45,28 @@
 
 .header__item:nth-child(1) ~ li a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 575px) {
+  .header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header__navbar {
+    display: none;
+  }
+
+  .header__navbar-open {
+    display: block;
+  }
+
+  .header__list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header__button {
+    display: block;
+  }
 }
