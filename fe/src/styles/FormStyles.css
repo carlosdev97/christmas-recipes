@@ -48,3 +48,11 @@
 .form__button:hover {
   background-color: #538d4e;
 }
+
+@media (max-width: 575px) {
+  .form {
+    width: 90%;
+    height: 60%;
+    justify-content: space-between;
+  }
+}

@@ -50,3 +50,9 @@
 .recipe__card-footer button:hover {
   background-color: #d62839;
 }
+
+@media (max-width: 575px) {
+  .recipe__card {
+    flex: 0 1 calc(100% - 20px);
+  }
+}
