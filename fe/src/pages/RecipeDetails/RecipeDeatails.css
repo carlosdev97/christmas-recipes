@@ -21,3 +21,9 @@
   max-width: 400px;
   height: auto;
 }
+
+@media (max-width: 575px) {
+  .recipe__image {
+    max-width: 100%;
+  }
+}
