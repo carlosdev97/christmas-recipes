@@ -23,7 +23,6 @@ export const RecipeDetails: React.FC = () => {
       try {
         const response = await apiClient.get(`/api/recipes/${id}`);
         setRecipe(response.data);
-        console.log(response);
       } catch (error) {
         setError("Error fetching the recipe. Please try again.");
         console.log(error);
